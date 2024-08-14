@@ -1,0 +1,48 @@
+<div style="margin: 5%">
+    <div>
+        <h1>Home</h1>
+    </div>
+    <div>
+        <h2>Formulario para subir Excell</h2>
+        <div style="margin-top: 1%;">
+        <p>Seleccionar Archivo</p>
+        <div style="margin-bottom: 15px;">
+            <input type="file" (change)="onFileSelected($event)" accept=".xls,.xlsx" />
+        </div>
+        <button type="button" class="btn btn-primary" (click)="onUpload()">Cargar</button>
+        <button type="button" class="btn btn-primary" style="margin-left: 10px;" (click)="onConsult()">Consultar</button>
+        </div>
+    </div>
+    <div style="margin-top: 20px;" *ngIf="showTable">
+        <h2>Datos del Archivo</h2>
+        <div style="margin-top: 1%;">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>RUT</th>
+                        <th>Campo 1</th>
+                        <th>Campo 2</th>
+                        <th>Campo 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let record of records">
+                        <td>{{ record.id }}</td>
+                        <td>{{ record.name }}</td>
+                        <td>{{ record.rut }}</td>
+                        <td>{{ record.field1 }}</td>
+                        <td>{{ record.field2 }}</td>
+                        <td>{{ record.field3 }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
