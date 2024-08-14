@@ -11,8 +11,8 @@
 node -v
 npm -v
 ng --version
-Instalación
-Clonar el repositorio: ```
+```
+## Clonar el repositorio:
 
 ```bash
 git clone https://github.com/iLeoMonsalve/testefx-front.git
